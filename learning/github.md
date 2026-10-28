@@ -10,6 +10,8 @@ An **issue** is a ticket for one task or bug. Each one has:
 - a **description**: what "done" looks like, and a link to the GDD section it comes from
 - **comments**: discussion about that one task
 
+Every issue gets one **role label**: 🟣 `design`, 🔵 `code`, or 🟠 `art-audio`. On the Issues page, click a label to see only that role's tasks. GitHub's built-in labels like `bug` can be added as well.
+
 A good issue is small enough to finish in one session. If it feels big, split it into several issues.
 
 ## The workflow

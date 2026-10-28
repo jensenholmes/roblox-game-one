@@ -39,7 +39,7 @@ The developer is the **producer**: they decide what gets built and in what order
 2. It is split into GitHub Issues, each small enough for one session (the **task**).
 3. It is built in `code/` from the issue, test first (the **how**).
 
-Work from an issue. If a request has no issue yet, offer to create one before building.
+Work from an issue. If a request has no issue yet, offer to create one before building. GitHub Issues is the task list for every role: give each issue one role label (`design`, `code`, or `art-audio`), matching the folder where the work happens.
 
 ## What lives where
 
@@ -56,3 +56,17 @@ Work from an issue. If a request has no issue yet, offer to create one before bu
 ## End of every session
 
 Add an entry to `learning/journal.md`: what we did, which concept it taught, and anything that was hard. Add new terms to `learning/jargon.md`.
+
+## Agent skills
+
+### Issue tracker
+
+Issues live in GitHub Issues (`jensenholmes/roblox-game-one`), managed with the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default status labels (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`), used alongside the role labels. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: one `GLOSSARY.md` and `docs/adr/` at the repo root. See `docs/agents/domain.md`.
