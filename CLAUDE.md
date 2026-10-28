@@ -14,7 +14,7 @@ Refer to the developer only as "the developer". Before every commit, check the s
 
 ## The game
 
-_Not decided yet. Once `design/game-design.md` has a concept, copy its one-sentence pitch here._
+Jetpack up from a moon base into floating asteroid fields, magnet in Scrap, and trade it for Stardust to collect ever-better Gear. (Full design: `design/game-design.md`.)
 
 ## How to talk to the developer
 

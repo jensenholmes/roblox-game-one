@@ -4,6 +4,33 @@ One entry per session: what we did, what concept it taught, and anything that wa
 
 ---
 
+## 2026-10-28: Designing the game (grilling session)
+
+**What we did:** Claude "grilled" me on the game design, one question at a time, each with a recommended answer. We went from a blank design doc to a full plan for Milestone 1 (the first public release):
+
+- The feeling: **chill progress** (an incremental game).
+- Shape: a **simulator** core loop first, with a personal base, ships and more Layers saved for later updates.
+- Theme: **space**, because I haven't seen it done much on Roblox.
+- World: a **vertical climb**. A moon-like Hub on the ground, a Layer of floating Asteroids and Scrap above, reached with a Jetpack in low gravity. I was torn between this and zero-g open space, and chose vertical because it's buildable and new players know where to go (`docs/adr/0005-vertical-climb-not-zero-g.md`).
+- Loop: hold the Magnet on Scrap → Backpack fills → fall back to the Hub → sell for Stardust → buy better Gear.
+- My own design principle: **no upgrade levels**. You buy new, better-looking Gear, and the shop has Buy / Equip / Equipped buttons so you can switch back.
+- Named everything in `GLOSSARY.md` (Scrap, Magnet, Backpack, Stardust, ...).
+
+**Concepts learned:**
+- **Player experience first:** decide the feeling, then pick features that serve it.
+- **Design tree:** each decision opens the next ones, so some questions have to wait for others.
+- **MVP, milestones and scope creep:** ship the smallest fun version first. New ideas go in a **parking lot** (our Update log) instead of growing the plan.
+- **Validation:** build the smallest thing that proves a mechanic works.
+- **States and transitions:** an item is always Not owned, Owned or Equipped, and buttons move it between them. Programmers use this idea constantly.
+- **Changing your mind is cheap on paper:** I reopened several decisions (field count, tutorial, upgrades), and that cost nothing because nothing was built yet.
+
+**What was hard / questions I still have:**
+- Choosing between zero-g and vertical. I liked both.
+- Where ships fit in a vertical world is still open.
+- _Add your own notes here._
+
+---
+
 ## 2026-10-28: Setting up the project structure
 
 **What we did:** Before writing any code, we designed the project's folder structure by working out which roles a game studio needs. Claude interviewed me one question at a time, with a recommended answer for each, and we made these decisions:

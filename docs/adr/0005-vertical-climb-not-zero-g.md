@@ -1,0 +1,5 @@
+# Vertical climb with low gravity, not zero-g open space
+
+The game's world is vertical: a moon-like Hub on the ground, with Layers of floating Asteroids above it, climbed with a Jetpack under low gravity. We considered a zero-gravity open-space world (drifting in every direction, progress measured by distance from the Hub), which the developer also liked. We chose vertical because it uses Roblox's normal character, so walking, phone controls and the camera work without custom code, and because "go up" is a goal a new player understands without a tutorial. Zero-g needs custom thruster movement, an any-direction camera and custom touch controls before anything else works. We also rejected mixing the two styles, because teaching players two kinds of movement would be confusing. Zero-g stays in the update log, possibly as a second game.
+
+We also chose to build the game in stages: a simulator-style core loop first (Milestone 1, the first public release), with a personal base, ships and more Layers as later updates.
