@@ -1,0 +1,3 @@
+# Role folders, each with its own CLAUDE.md
+
+The project is organised by studio role: `design/`, `code/`, `art-audio/`, plus `learning/` for the developer. Each role's instructions (`CLAUDE.md`) sit in the same folder as that role's work, because Claude automatically reads the `CLAUDE.md` in the folder it is working in. Rules kept anywhere else would need reminding every time. We started with three role folders instead of eight (YAGNI): the developer is the producer, testing is part of coding, and release is already understood from publishing a previous game. A folder gets split when it grows too big.

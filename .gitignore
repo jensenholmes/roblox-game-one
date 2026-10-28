@@ -1,0 +1,15 @@
+# Large art source files (.blend, .fbx, .wav, ...) are backed up outside Git.
+# See docs/adr/0004-large-art-source-out-of-git.md
+art-audio/source/*
+!art-audio/source/.gitkeep
+
+# Roblox place files: the map lives in Roblox, not Git.
+# See docs/adr/0003-map-lives-in-roblox.md
+*.rbxl
+*.rbxlx
+*.rbxl.lock
+*.rbxlx.lock
+
+# OS clutter
+Thumbs.db
+.DS_Store
