@@ -26,8 +26,12 @@ Technical jargon (Rojo, TDD, and so on) goes in `learning/jargon.md` instead.
 
 **Sell Pad**: the spot on the Hub where stepping on it turns all your Scrap into Stardust.
 
+**Strength**: a Magnet's stat. Higher strength pulls Scrap faster. Pull time = toughness ÷ strength.
+
 **Stardust**: the game's currency, earned by selling Scrap. Same word for one or many: "1 Stardust", "5,000 Stardust". _Avoid: credits, coins, money._
 
 **Tier**: one step in a line of Gear, e.g. "Magnet tier 3". Each tier looks different. _Avoid: level._
+
+**Toughness**: how hard a piece of Scrap is to pull. Pull time = toughness ÷ the Magnet's strength. Milestone 1 has one kind of Scrap, with a toughness of 4.0.
 
 **Upgrade Terminal**: the shop booth on the Hub where players buy and equip Gear. _Avoid: shop (in code and docs)._

@@ -4,6 +4,28 @@ One entry per session: what we did, what concept it taught, and anything that wa
 
 ---
 
+## 2026-10-29: Choosing the balancing numbers (issue #3)
+
+**What we did:** Picked first-guess numbers for everything the code needs, one question at a time, and wrote them into a new **Balancing** section in `design/game-design.md`:
+- Two anchors: the first run takes **about a minute**, and owning every tier takes **about 20 minutes** (I cut this from 30–45 because 5 tiers stretched over 45 minutes would feel like a grind).
+- Gear: prices 10 / 20 / 40 / 70 ✨, Backpacks 10 / 15 / 25 / 40 / 60, Magnet pull time 4.0 → 1.3 seconds.
+- 1 Stardust per Scrap, Scrap respawns after 5 s.
+- Movement: gravity 65, top falling speed 40, Jetpack boost 25 studs/s, 3 s of Fuel, 1 s refill, Magnet range 30 studs.
+- My idea, saved for a later update: rarer Scrap worth more but **tougher** to pull, so upgrading the Magnet keeps mattering. Pull time will be built as toughness ÷ strength so it's easy to add.
+
+**Concepts learned:**
+- **Anchors**: pick a few numbers about time and feel, then work the rest out from them.
+- **Trade-offs in balancing**: a bigger Backpack earns more per trip but makes runs longer; a slower Magnet makes upgrades feel bigger but makes the first run longer.
+- **Exponential curves**: prices that roughly double each tier.
+- **Gating** and **designing for change**: leave room for a future feature without building it yet.
+- **Pushing back on a recommendation** is part of the job. I changed Stardust per Scrap, the tier 2 price, the Magnet curve and the total time.
+
+**What was hard / questions I still have:**
+- The movement numbers are hard to judge on paper; we'll find out in Studio.
+- _Add your own notes here._
+
+---
+
 ## 2026-10-29: Setting up Rojo and the test runner (issue #2)
 
 **What we did:**
