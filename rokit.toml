@@ -1,0 +1,5 @@
+# The tools this project uses, with exact versions.
+# Run `rokit install` to get them on a new computer.
+[tools]
+rojo = "rojo-rbx/rojo@7.7.1"
+lune = "lune-org/lune@0.11.1"

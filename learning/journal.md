@@ -4,6 +4,27 @@ One entry per session: what we did, what concept it taught, and anything that wa
 
 ---
 
+## 2026-10-29: Setting up Rojo and the test runner (issue #2)
+
+**What we did:**
+- Installed **Rokit**, which then installed the exact versions of **Rojo** (7.7.1) and **Lune** (0.11.1) listed in `rokit.toml`.
+- Wrote `default.project.json`, which tells Rojo where each code folder goes in Studio and leaves the map out (ADR 0003).
+- Set up a tiny test framework (`code/tests/TestKit.luau`) and a runner. The first test, for `formatNumber`, passed 3 out of 3.
+- Installed the Rojo plugin in Studio, connected it to `rojo serve`, and saw "Hello from Rojo!" in the Output window.
+
+**Concepts learned:**
+- **Tool versions are part of the project.** A manifest (`rokit.toml`) pins exact versions, so the setup works the same on any computer.
+- **Silence means success.** Many command-line tools print nothing when everything worked.
+- **Automated tests** run in seconds with `lune run code/tests/run.luau`, which is what makes test first (TDD) practical.
+
+**What was hard / questions I still have:**
+- `rokit` wasn't found at first, because a terminal only reads PATH when it opens.
+- `rojo` only works from inside the project folder, because it looks for `rokit.toml` there.
+- The Rojo button took a few tries to appear in Studio.
+- _Add your own notes here._
+
+---
+
 ## 2026-10-28: Designing the game (grilling session)
 
 **What we did:** Claude "grilled" me on the game design, one question at a time, each with a recommended answer. We went from a blank design doc to a full plan for Milestone 1 (the first public release):

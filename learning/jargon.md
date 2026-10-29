@@ -42,6 +42,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 
 **`.gitignore`**: a file listing things Git should ignore and never save.
 
+**Greybox**: a rough version of a map built from plain blocks, to test the layout before making real art.
+
 **Hook**: the thing that makes a player pick your game out of thousands, e.g. a theme they haven't seen before.
 
 **HUD (Heads-Up Display)**: the info on screen while you play: health, coins, timer.
@@ -51,6 +53,10 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 **Inventory**: a menu listing everything a player owns.
 
 **Luau**: Roblox's programming language, based on Lua.
+
+**Lune**: a program that runs Luau code on your computer, outside Roblox. We use it to run our tests in seconds without opening Studio.
+
+**Manifest**: a file listing what a project needs, with exact versions. Ours is `rokit.toml`, which lists Rojo and Lune.
 
 **Mechanic**: a single rule of how a game works, e.g. "the Jetpack uses Fuel".
 
@@ -68,9 +74,13 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 
 **Playtest**: playing your own game (or watching others play it) to find out if it's fun and find problems.
 
+**Plugin**: an add-on that gives a program new buttons and features. The Rojo plugin lets Studio connect to `rojo serve`.
+
 **`.rbxm`**: Roblox's saved-model file format. Rojo can sync these into the game.
 
 **Respawn**: to reappear after dying or falling, or (for objects) to come back after being collected.
+
+**Rokit**: a tool installer. It reads `rokit.toml` and downloads the exact tool versions this project uses, so every computer gets the same ones (`rokit install`).
 
 **Rojo**: a tool that syncs code and model files from your computer into Roblox Studio, so they can live in Git.
 
@@ -85,6 +95,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 **Source of truth**: the one place where a piece of information officially lives, so there's no confusion about which copy is right.
 
 **States and transitions**: a way to describe something that's always in exactly one *state* (e.g. Not owned, Owned, Equipped), with *transitions* (e.g. Buy, Equip) moving it between states. Makes code easy to reason about and test.
+
+**Sub-issue**: a GitHub Issue that sits under a bigger "parent" issue. Our parent issue #1 tracks all of Milestone 1.
 
 **TDD (Test-Driven Development)**: write the test first, watch it fail, then write the code that makes it pass.
 
