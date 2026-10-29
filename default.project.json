@@ -1,0 +1,26 @@
+{
+  "name": "roblox-game-one",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "code/src/shared"
+      },
+      "Models": {
+        "$path": "art-audio/models"
+      }
+    },
+    "ServerScriptService": {
+      "Server": {
+        "$path": "code/src/server"
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Client": {
+          "$path": "code/src/client"
+        }
+      }
+    }
+  }
+}
