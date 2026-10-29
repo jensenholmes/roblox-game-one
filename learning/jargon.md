@@ -4,6 +4,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 
 **ADR (Architecture Decision Record)**: a short note that says "we decided X, because Y". It means you (or a future teammate) can find out *why* something is the way it is. Ours live in `docs/adr/`.
 
+**Anchor (balancing)**: one of a few key numbers you pick first, usually about time ("the first run takes a minute"). The other numbers are worked out from the anchors, so if an anchor changes you redo the sums instead of guessing everything again.
+
 **Asset ID**: the number Roblox gives anything you upload (a mesh, image, or sound), written like `rbxassetid://123456`. Code uses it to load the asset.
 
 **Automated test**: a small piece of code that checks other code works, e.g. "a player with 10 coins who buys a 5-coin item has 5 left". It runs by itself every time, so you find out straight away if a change broke something.
@@ -22,11 +24,17 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 
 **DataStore**: Roblox's service for saving player data between visits, e.g. how much currency a player has.
 
+**Designing for change**: building something so a likely future feature is easy to add, without building that feature yet. Example: working out pull time as toughness ÷ strength, so tougher Scrap can be added later without a rewrite.
+
 **Design principle**: a rule every feature has to follow, e.g. "no upgrade levels". It keeps lots of separate decisions consistent.
 
 **Design tree**: a map of decisions where each answer opens the next ones. Some questions can't be asked until the ones before them are settled.
 
+**Exponential curve**: numbers that multiply each step instead of adding, e.g. prices that roughly double (10 → 20 → 40 → 70). The standard shape for prices in incremental games.
+
 **Flag**: an option added to a command, starting with `--`. For example, `--web` in `gh auth login --web` means "log in through the browser".
+
+**Gating**: content you can reach, but that is only comfortable once you've upgraded, e.g. tough Scrap that takes ages to pull with a weak Magnet. It gives players a reason to upgrade.
 
 **GDD (Game Design Document)**: the document describing what the game is: concept, core loop, features, UI. Ours is `design/game-design.md`.
 
@@ -41,6 +49,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 **GitHub**: a website that hosts Git projects online and adds teamwork tools like Issues.
 
 **`.gitignore`**: a file listing things Git should ignore and never save.
+
+**Grind**: repeating the same thing for a long time just to reach a goal. A little feels rewarding; too much feels like a chore.
 
 **Greybox**: a rough version of a map built from plain blocks, to test the layout before making real art.
 
@@ -95,6 +105,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 **Source of truth**: the one place where a piece of information officially lives, so there's no confusion about which copy is right.
 
 **States and transitions**: a way to describe something that's always in exactly one *state* (e.g. Not owned, Owned, Equipped), with *transitions* (e.g. Buy, Equip) moving it between states. Makes code easy to reason about and test.
+
+**Stud**: Roblox's unit of distance. A standard character is about 5 studs tall, and walking speed is 16 studs per second.
 
 **Sub-issue**: a GitHub Issue that sits under a bigger "parent" issue. Our parent issue #1 tracks all of Milestone 1.
 
