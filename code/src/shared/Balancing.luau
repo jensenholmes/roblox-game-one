@@ -9,6 +9,9 @@ local Balancing = {
 	JetpackBoostSpeed = 25, -- studs/s, the steady speed the player rises at while boosting
 	MaxFuel = 3, -- seconds of boosting in a full tank (about 75 studs of climb)
 	FuelRefillTime = 1, -- seconds to refill an empty tank after landing
+
+	-- Scrap
+	ScrapRespawnTime = 5, -- seconds before collected Scrap comes back
 }
 
 return Balancing
