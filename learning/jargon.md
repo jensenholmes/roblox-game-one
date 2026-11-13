@@ -8,6 +8,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 
 **Asset ID**: the number Roblox gives anything you upload (a mesh, image, or sound), written like `rbxassetid://123456`. Code uses it to load the asset.
 
+**Attribute**: a labelled value you can attach to anything in Roblox, e.g. `Fuel = 2.5` on a player. Other scripts can read it, and you can watch it change in Studio's Properties panel.
+
 **Automated test**: a small piece of code that checks other code works, e.g. "a player with 10 coins who buys a 5-coin item has 5 left". It runs by itself every time, so you find out straight away if a change broke something.
 
 **Balancing**: tuning a game's numbers (prices, earnings, speeds) so progress feels steady, not too slow or too fast.
@@ -29,6 +31,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 **DataStore**: Roblox's service for saving player data between visits, e.g. how much currency a player has.
 
 **Designing for change**: building something so a likely future feature is easy to add, without building that feature yet. Example: working out pull time as toughness ÷ strength, so tougher Scrap can be added later without a rewrite.
+
+**Device emulator**: a Studio tool that pretends your computer is a phone or tablet, so you can test touch controls without a real phone.
 
 **Design principle**: a rule every feature has to follow, e.g. "no upgrade levels". It keeps lots of separate decisions consistent.
 

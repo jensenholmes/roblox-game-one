@@ -4,6 +4,27 @@ One entry per session: what we did, what concept it taught, and anything that wa
 
 ---
 
+## 2026-11-13: Jetpack and Fuel (issue #7)
+
+**What we did:**
+- Picked **hold Jump to fly** (Space, or the jump button on phones), so there's no new control to learn.
+- Added the Jetpack numbers to `Balancing.luau`: rise at 25 studs/s, 3 s of Fuel, 1 s to refill.
+- Wrote the Fuel tests first (drain, refill, never below empty or above full), watched them fail, then wrote `updateFuel`. 12 tests pass.
+- Wrote the Jetpack script, and stored Fuel as an attribute so I can watch it in Studio (and the HUD can show it later).
+- Playtested with a keyboard and with the device emulator: flying works on both, and Fuel refills on landing.
+- Fixed my first **merge conflict**: two branches had both added a journal entry at the top of this file.
+
+**Concepts learned:**
+- **Same pattern, new feature:** numbers in Balancing → test → pure function → script → playtest. Repeating a pattern makes each feature faster.
+- **Merge conflicts** happen when two branches change the same lines. Merging a Pull Request soon after finishing it helps avoid them.
+- **Test on every device** players use, not just your own.
+
+**What was hard / questions I still have:**
+- Climbing all the way to Layer 1 can't be tested until the Hub and Layer 1 are built (#5).
+- _Add your own notes here._
+
+---
+
 ## 2026-11-13: Finishing low gravity, and learning Git (issue #6)
 
 **What we did:**
