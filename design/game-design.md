@@ -1,6 +1,6 @@
 # Game Design Document
 
-_Status: Milestone 1 designed (2026-10-28). Title not chosen yet._
+_Status: Milestone 1 designed (2026-10-28), first balancing numbers chosen (2026-10-29). Title not chosen yet._
 
 ## Concept
 
@@ -88,6 +88,63 @@ magnet Scrap → Backpack fills → drop down to the Hub → sell for Stardust
 
 - The game remembers **everything** between visits: Stardust, which Gear is owned and which is equipped, and the Scrap in the Backpack.
 
+## Balancing
+
+First-guess numbers, chosen 2026-10-29 (issue #3). **All of these will be tuned in playtesting.**
+
+### Anchors
+
+The other numbers are worked out from these two. If one changes, redo the sums.
+
+- **The first run takes about a minute** (fly up, fill the tier 1 Backpack, fall down, sell).
+- **Owning every tier takes about 20 minutes.** This is short on purpose: players see the whole of Milestone 1 in one sitting and are left wanting Layer 2. _(May change.)_
+
+### Gear
+
+| Tier | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| Price (Magnet and Backpack each) | owned from the start | 10 ✨ | 20 ✨ | 40 ✨ | 70 ✨ |
+| Magnet pull time (one piece of Scrap) | 4.0 s | 3.0 s | 2.3 s | 1.7 s | 1.3 s |
+| Backpack holds | 10 | 15 | 25 | 40 | 60 |
+
+- Each price roughly doubles, and each Magnet is about 25% faster than the one before.
+- Both tier 2 items cost 10 ✨, so a new player's first sale buys their first Gear straight away, and they choose between faster pulling and a bigger Backpack.
+- **Pull time = Scrap toughness ÷ Magnet strength.** In Milestone 1 there is one kind of Scrap, with a toughness of 4.0, so the table above is the whole story. Building it this way leaves room for tougher, more valuable Scrap later (see the Update log).
+
+### Economy
+
+| Value | Number |
+|---|---|
+| Stardust per Scrap | 1 |
+| Scrap respawn time | 5 s |
+
+### Movement
+
+Distances are in studs. A Roblox character is about 5 studs tall.
+
+| Value | Number | Why |
+|---|---|---|
+| Gravity | 65 studs/s² (about 1/3 of Roblox's 196.2) | Clearly floaty, but walking on the Hub doesn't feel like syrup |
+| Top falling speed | 40 studs/s | A fall from the top of Layer 1 takes about 4 s |
+| Jetpack boost | rise at a steady 25 studs/s | Faster than walking (16), slower than falling, so going up takes effort and coming down is the fun part |
+| Fuel | 3 s of boosting (75 studs of climb) | Enough to reach Layer 1 from the Hub, not enough to reach the top in one go |
+| Fuel refill | 1 s for a full tank, after landing | Landing is a short rest, not a wait |
+| Magnet range | 30 studs (the same for every tier) | Pull from a nearby Asteroid or mid-air, but you still move around to find Scrap |
+
+**Rules for the greybox (#5):** Layer 1 sits about **50 to 150 studs** above the Hub, and the gaps between Asteroids stay **under about 60 studs**, so every jump is reachable on one tank but some feel like a stretch.
+
+### Rough check
+
+Assumes about 2 s to find and aim at each piece of Scrap, plus 15 s of travel per run.
+
+| Gear (Magnet + Backpack) | One run | Stardust per minute |
+|---|---|---|
+| tier 1 + tier 1 | ~75 s | ~8 |
+| tier 3 + tier 3 | ~2 min | ~12 |
+| tier 5 + tier 5 | ~3½ min | ~17 |
+
+Buying both items of each tier in turn: tier 2s at about 2½ min, tier 3s at 6½ min, tier 4s at 12½ min, tier 5s at **about 21 minutes**. Each purchase takes about 1 or 2 runs.
+
 ## UI/UX
 
 Designed for a phone screen first.
@@ -117,7 +174,7 @@ Ideas parked for after Milestone 1. Not designed yet, and not promised.
 - **Layer 2**, with its own shop selling about 5 more tiers of each Gear (design principle 2)
 - **Jetpack tiers**, which gate which Layers a player can reach. Each Layer shows a sign like "Layer 2: needs Jetpack tier 3"
 - **Guided-arrow tutorial**: short hints that teach the loop by doing ("Hold to magnet Scrap" → "Backpack full! Drop down to sell" → "Buy new Gear")
-- **Scrap rarities**: common / uncommon / rare, with different looks and values
+- **Scrap rarities**: several kinds of Scrap on the same Layer, with different looks. Rarer kinds are worth more Stardust and are **tougher**, so they take longer to pull. Each new kind makes a player's Magnet feel slow again, which gives them a reason to upgrade. (Pull time is already built as toughness ÷ strength, so this needs no rewrite.)
 - **Moving Scrap and Asteroids** that drift through space
 - **Personal base**: your own station that processes Scrap and earns on its own (the "tycoon half")
 - **Ships**, to reach far-off areas. _Open question: how ships fit the vertical world._
