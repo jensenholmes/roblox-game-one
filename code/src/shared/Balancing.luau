@@ -13,6 +13,7 @@ local Balancing = {
 	-- Scrap
 	ScrapRespawnTime = 5, -- seconds before collected Scrap comes back
 	ScrapToughness = 4, -- pull time = toughness ÷ Magnet strength
+	StardustPerScrap = 1, -- what each piece of Scrap sells for at the Sell Pad
 
 	-- Magnet and Backpack (starter Gear; the Gear catalogue in #11 adds the other tiers)
 	MagnetRange = 30, -- studs, the same for every Magnet
