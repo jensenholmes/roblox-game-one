@@ -118,15 +118,21 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 
 **Server**: the computer that runs a game for everyone in it. On Roblox, each running copy of a game is one server.
 
+**Single responsibility**: each file or function does one job. ScrapService handles the Scrap rules, and a tiny script just switches it on. Small, focused pieces are easier to understand, test and change.
+
 **Source of truth**: the one place where a piece of information officially lives, so there's no confusion about which copy is right.
 
 **Staging**: picking which changed files go into your next commit. In GitHub Desktop, it's the tick boxes next to each file.
+
+**Spawn point**: a marker in the map showing where something appears. Our Scrap spawn points are invisible Parts tagged `ScrapSpawn`.
 
 **States and transitions**: a way to describe something that's always in exactly one *state* (e.g. Not owned, Owned, Equipped), with *transitions* (e.g. Buy, Equip) moving it between states. Makes code easy to reason about and test.
 
 **Stud**: Roblox's unit of distance. A standard character is about 5 studs tall, and walking speed is 16 studs per second.
 
 **Sub-issue**: a GitHub Issue that sits under a bigger "parent" issue. Our parent issue #1 tracks all of Milestone 1.
+
+**Tag**: a label you stick on things in Roblox (Properties → Tags), so code can find all of them at once. The spelling must match exactly.
 
 **TDD (Test-Driven Development)**: write the test first, watch it fail, then write the code that makes it pass.
 

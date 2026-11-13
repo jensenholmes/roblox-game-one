@@ -4,6 +4,29 @@ One entry per session: what we did, what concept it taught, and anything that wa
 
 ---
 
+## 2026-11-13: Scrap spawns and respawns (issue #8)
+
+**What we did:**
+- Added the respawn time (5 s) to `Balancing.luau`, wrote the `isReadyToRespawn` tests first, then the function. 14 tests pass.
+- Wrote `ScrapService` on the server: it puts Scrap at every spawn point, removes it when collected, and brings it back after 5 seconds.
+- Placed spawn points in Studio: invisible Parts tagged `ScrapSpawn`, with shadows turned off.
+- Made Scrap clickable as a stand-in for the Magnet, so collecting could be tested. The Magnet replaces it in #9.
+- Did my first full Git cycle on my own for #7: commit, push, open the Pull Request, merge.
+
+**Concepts learned:**
+- **Single responsibility:** one file holds the Scrap rules, another just switches them on.
+- **The server is the boss:** Scrap only exists because the server made it. Deleting it on my own screen didn't change the real game.
+- **Debugging step by step:** when Scrap didn't appear, we checked one thing at a time (are the scripts in Studio? is the tag right?) until we found the problem.
+- **After merging, switch to main and Pull**, or your computer still has the old version.
+
+**What was hard / questions I still have:**
+- My first spawn points didn't work because of the tag. Running a command to count the tagged Parts showed the new one was right.
+- Finding the Output window and Command Bar in the new Studio layout.
+- Testing with the Command Bar didn't work, because it gets its own copy of the script, so we switched to clicking.
+- _Add your own notes here._
+
+---
+
 ## 2026-11-13: Jetpack and Fuel (issue #7)
 
 **What we did:**
