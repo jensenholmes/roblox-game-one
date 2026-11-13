@@ -4,6 +4,25 @@ One entry per session: what we did, what concept it taught, and anything that wa
 
 ---
 
+## 2026-10-29: Starting low gravity (issue #6, in progress)
+
+**What we did:**
+- Picked #6 as the next task, because it unblocks the Jetpack (#7) and is the first real gameplay code.
+- Added `code/src/shared/Balancing.luau`, which holds the gravity (65) and top falling speed (40) from the GDD's Balancing table.
+- Found out Roblox has no fall damage by default, so "no fall damage" needs no code.
+
+**Concepts learned:**
+- **Single source of truth / DRY**: every script reads its numbers from one file, so tuning means changing one number in one place.
+- **Pure functions**: the fall-speed cap will be a function that only uses its inputs, which makes it easy to test.
+- **Velocity**: in Roblox, down is negative, so falling at 50 studs/s is `-50`.
+
+**Next time:** write `code/tests/capFallSpeed.spec.luau` first (fast fall gets capped, slow fall is left alone, going up is left alone), watch it fail, then write `capFallSpeed`.
+
+**What was hard / questions I still have:**
+_Add your own notes here._
+
+---
+
 ## 2026-10-29: Setting up Rojo and the test runner (issue #2)
 
 **What we did:**

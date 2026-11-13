@@ -78,6 +78,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 
 **`.rbxm`**: Roblox's saved-model file format. Rojo can sync these into the game.
 
+**Pure function**: a function that only uses its inputs to work out its answer, and changes nothing else. Same inputs, same answer, every time. That makes it easy to test.
+
 **Respawn**: to reappear after dying or falling, or (for objects) to come back after being collected.
 
 **Rokit**: a tool installer. It reads `rokit.toml` and downloads the exact tool versions this project uses, so every computer gets the same ones (`rokit install`).
@@ -107,6 +109,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 **UX / UI**: UX (user experience) is how using something *feels*; UI (user interface) is the actual buttons, menus, and screens.
 
 **Validate**: prove an idea works, ideally with the smallest thing you can build.
+
+**Velocity**: speed plus direction. In Roblox, a positive Y velocity means moving up and a negative one means moving down.
 
 **winget**: Windows' built-in package manager. It installs programs from the terminal, e.g. `winget install --id GitHub.cli`.
 
