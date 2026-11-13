@@ -4,6 +4,27 @@ One entry per session: what we did, what concept it taught, and anything that wa
 
 ---
 
+## 2026-11-13: The Magnet (issue #9)
+
+**What we did:**
+- Added the Magnet and Backpack numbers to `Balancing.luau`: 30 stud range, 4 second pull with the starter Magnet, and a Backpack that holds 10.
+- Wrote tests first for three sets of rules: the Backpack (add, full, empty), pull time (toughness ÷ strength) and `checkPull` (the server's referee). 29 tests pass.
+- Added two RemoteEvents, `MagnetStart` and `MagnetStop`, so a player's computer can *ask* the server to pull.
+- Wrote `MagnetService` on the server, which checks every pull, and a client script that finds the Scrap nearest your pointer and shows a progress bar.
+- Removed the clickable stand-in from #8.
+- Playtested everything: pulling, letting go, moving out of range, a full Backpack, phone controls, and two players on one Scrap.
+
+**Concepts learned:**
+- **Never trust the client:** the player's computer only asks, and the server decides.
+- **RemoteEvents** carry messages between a player's computer and the server.
+- **Shared rules:** the same `pullTime` function runs on both sides, so the progress bar and the server agree on how long a pull takes.
+- **Designing for change:** pull time is toughness ÷ strength, so tougher Scrap and better Magnets need no rewrite.
+
+**What was hard / questions I still have:**
+- _Add your own notes here._
+
+---
+
 ## 2026-11-13: Scrap spawns and respawns (issue #8)
 
 **What we did:**

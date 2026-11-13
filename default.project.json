@@ -8,6 +8,15 @@
       },
       "Models": {
         "$path": "art-audio/models"
+      },
+      "Remotes": {
+        "$className": "Folder",
+        "MagnetStart": {
+          "$className": "RemoteEvent"
+        },
+        "MagnetStop": {
+          "$className": "RemoteEvent"
+        }
       }
     },
     "ServerScriptService": {
