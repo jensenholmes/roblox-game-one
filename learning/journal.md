@@ -4,6 +4,27 @@ One entry per session: what we did, what concept it taught, and anything that wa
 
 ---
 
+## 2026-11-13: Finishing low gravity, and learning Git (issue #6)
+
+**What we did:**
+- Wrote the test first (`capFallSpeed.spec.luau`), watched it fail, then wrote `capFallSpeed` to make it pass. All 7 tests pass.
+- Hooked it into the game: a server script lowers gravity for everyone, and a client script caps each player's fall speed.
+- Playtested in Studio: jumps are floaty and the big fall is gentle. I might tune the gravity later (it's one number in `Balancing.luau`).
+- Started using **GitHub Desktop** to learn Git: branches, the Changes and History tabs, commits, pushing and Pull Requests.
+
+**Concepts learned:**
+- **Git is save points for code.** A commit is a snapshot with a note saying why. GitHub keeps a copy online as a backup.
+- **Branches** let you work without breaking the main version. A **Pull Request** is the final check before merging.
+- **Changes vs History:** Changes shows unsaved work. Once you commit, it moves into History.
+- **Client vs server:** the server is the boss copy of the game, and each player's client controls their own character.
+- **The code and the map live in different places.** Rojo copies code into any Studio world, but the map only lives in the world you build it in, so keep one published world for the game.
+
+**What was hard / questions I still have:**
+- At first my changes weren't in the Changes tab, because Claude had already committed them. From now on Claude writes the files and I do the commits and Pull Requests.
+- _Add your own notes here._
+
+---
+
 ## 2026-10-29: Starting low gravity (issue #6, in progress)
 
 **What we did:**

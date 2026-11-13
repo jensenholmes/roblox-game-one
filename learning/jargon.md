@@ -12,9 +12,13 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 
 **Binary file**: a file that isn't readable text, e.g. `.blend`, `.png` or `.wav`. Git can't store just the changed parts of a binary file, so each version is a full copy.
 
+**Branch**: a separate copy of the project to work in, so you can try things without breaking the main version (`main`). Ours are named after their issue, e.g. `6-low-gravity`.
+
 **CLAUDE.md**: an instructions file Claude reads automatically. The one at the top of the project applies everywhere; the one in a folder adds rules for that folder.
 
 **CLI (Command-Line Interface)**: a program you use by typing commands in a terminal instead of clicking, e.g. `git` or `gh`.
+
+**Client**: the copy of the game running on one player's own computer. Each player's client controls their own character's movement.
 
 **Commit**: a saved snapshot of the project in Git, with a message explaining what changed and why.
 
@@ -78,7 +82,13 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 
 **`.rbxm`**: Roblox's saved-model file format. Rojo can sync these into the game.
 
+**Pull Request (PR)**: a request on GitHub to merge a branch into `main`. It's the last check before your work becomes the official version. Writing `fixes #6` in it closes issue #6 when it's merged.
+
+**Push**: send your commits from your computer up to GitHub, as an online backup.
+
 **Pure function**: a function that only uses its inputs to work out its answer, and changes nothing else. Same inputs, same answer, every time. That makes it easy to test.
+
+**Repository (repo)**: a project folder plus Git's memory of every saved version of it.
 
 **Respawn**: to reappear after dying or falling, or (for objects) to come back after being collected.
 
@@ -95,6 +105,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 **Server**: the computer that runs a game for everyone in it. On Roblox, each running copy of a game is one server.
 
 **Source of truth**: the one place where a piece of information officially lives, so there's no confusion about which copy is right.
+
+**Staging**: picking which changed files go into your next commit. In GitHub Desktop, it's the tick boxes next to each file.
 
 **States and transitions**: a way to describe something that's always in exactly one *state* (e.g. Not owned, Owned, Equipped), with *transitions* (e.g. Buy, Equip) moving it between states. Makes code easy to reason about and test.
 
