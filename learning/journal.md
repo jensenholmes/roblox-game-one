@@ -4,6 +4,25 @@ One entry per session: what we did, what concept it taught, and anything that wa
 
 ---
 
+## 2026-11-13: The Sell Pad (issue #10)
+
+**What we did:**
+- Added the Scrap value (1 Stardust each) to `Balancing.luau`.
+- Wrote tests first for `sellScrap` (Scrap × value = Stardust, Backpack emptied) and `shouldSell` (only sell at the moment you step on). 37 tests pass.
+- Wrote `SellService` on the server. It checks each player's position against every pad tagged `SellPad`, and stores Stardust as an attribute on the player.
+- Made a Sell Pad on the Hub in Studio. Stepping on it turns Scrap into Stardust. The whole core loop now works: fly up, magnet Scrap, drop down, sell.
+
+**Concepts learned:**
+- **React to a change, not a state:** "just stepped on" happens once, while "standing on" is true every frame. Selling on the change stops it selling over and over.
+- **Position checks vs touch events:** touch events fire on and off as each body part brushes the pad, so checking the player's position is more reliable.
+- **Not every error is your bug:** the "Asset type does not match" message came from something else in the world, not our code.
+
+**What was hard / questions I still have:**
+- At first nothing happened on the pad. We went through a checklist (code in Studio? tag right? attributes there?) and then it worked, probably because Rojo hadn't synced yet.
+- _Add your own notes here._
+
+---
+
 ## 2026-11-13: The Magnet (issue #9)
 
 **What we did:**
