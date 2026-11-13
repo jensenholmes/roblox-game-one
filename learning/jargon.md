@@ -84,6 +84,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 
 **MVP (Minimum Viable Product)**: the smallest version of a product that's still useful (or fun). You ship it first, then improve it.
 
+**Never trust the client**: the server checks everything a player's computer sends, because players can change their own copy of the game. The player *asks* to pull Scrap; the server checks range, timing and Backpack space before saying yes.
+
 **Parking lot**: a list of ideas written down on purpose so they aren't lost, but that don't block today's work. Ours is the Update log in the GDD.
 
 **PATH**: the list of folders your computer searches when you type a program's name. A terminal reads it once when it opens, so newly installed programs need a fresh terminal (or their full path).
@@ -101,6 +103,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 **Push**: send your commits from your computer up to GitHub, as an online backup.
 
 **Pure function**: a function that only uses its inputs to work out its answer, and changes nothing else. Same inputs, same answer, every time. That makes it easy to test.
+
+**RemoteEvent**: a one-way message channel between a player's computer and the server. The Magnet uses `MagnetStart` and `MagnetStop` to ask the server to start or stop a pull.
 
 **Repository (repo)**: a project folder plus Git's memory of every saved version of it.
 

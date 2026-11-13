@@ -12,6 +12,12 @@ local Balancing = {
 
 	-- Scrap
 	ScrapRespawnTime = 5, -- seconds before collected Scrap comes back
+	ScrapToughness = 4, -- pull time = toughness ÷ Magnet strength
+
+	-- Magnet and Backpack (starter Gear; the Gear catalogue in #11 adds the other tiers)
+	MagnetRange = 30, -- studs, the same for every Magnet
+	StarterMagnetStrength = 1, -- 4 ÷ 1 = 4 seconds to pull one piece of Scrap
+	StarterBackpackCapacity = 10, -- pieces of Scrap
 }
 
 return Balancing

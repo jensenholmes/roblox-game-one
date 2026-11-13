@@ -29,18 +29,14 @@ local function spawnScrap(spawnPoint: BasePart)
 	scrap.Anchored = true -- Scrap stays still.
 	scrap.CanCollide = false
 	scrap:AddTag(SCRAP_TAG)
-
-	-- Stand-in for the Magnet so Scrap can be tested: click a piece to collect it.
-	-- The click is handled here on the server. Remove this when the Magnet is built (#9).
-	local clickDetector = Instance.new("ClickDetector")
-	clickDetector.MouseClick:Connect(function()
-		ScrapService.collect(scrap)
-	end)
-	clickDetector.Parent = scrap
-
 	scrap.Parent = scrapFolder
 
 	spawnPointOf[scrap] = spawnPoint
+end
+
+-- Is this a piece of Scrap that's in the world right now? Used to check what players send us.
+function ScrapService.isScrap(thing: any): boolean
+	return spawnPointOf[thing] ~= nil
 end
 
 -- Removes a piece of Scrap and starts its respawn timer.
