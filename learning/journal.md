@@ -4,6 +4,46 @@ One entry per session: what we did, what concept it taught, and anything that wa
 
 ---
 
+## 2026-11-13: Finishing low gravity, and learning Git (issue #6)
+
+**What we did:**
+- Wrote the test first (`capFallSpeed.spec.luau`), watched it fail, then wrote `capFallSpeed` to make it pass. All 7 tests pass.
+- Hooked it into the game: a server script lowers gravity for everyone, and a client script caps each player's fall speed.
+- Playtested in Studio: jumps are floaty and the big fall is gentle. I might tune the gravity later (it's one number in `Balancing.luau`).
+- Started using **GitHub Desktop** to learn Git: branches, the Changes and History tabs, commits, pushing and Pull Requests.
+
+**Concepts learned:**
+- **Git is save points for code.** A commit is a snapshot with a note saying why. GitHub keeps a copy online as a backup.
+- **Branches** let you work without breaking the main version. A **Pull Request** is the final check before merging.
+- **Changes vs History:** Changes shows unsaved work. Once you commit, it moves into History.
+- **Client vs server:** the server is the boss copy of the game, and each player's client controls their own character.
+- **The code and the map live in different places.** Rojo copies code into any Studio world, but the map only lives in the world you build it in, so keep one published world for the game.
+
+**What was hard / questions I still have:**
+- At first my changes weren't in the Changes tab, because Claude had already committed them. From now on Claude writes the files and I do the commits and Pull Requests.
+- _Add your own notes here._
+
+---
+
+## 2026-10-29: Starting low gravity (issue #6, in progress)
+
+**What we did:**
+- Picked #6 as the next task, because it unblocks the Jetpack (#7) and is the first real gameplay code.
+- Added `code/src/shared/Balancing.luau`, which holds the gravity (65) and top falling speed (40) from the GDD's Balancing table.
+- Found out Roblox has no fall damage by default, so "no fall damage" needs no code.
+
+**Concepts learned:**
+- **Single source of truth / DRY**: every script reads its numbers from one file, so tuning means changing one number in one place.
+- **Pure functions**: the fall-speed cap will be a function that only uses its inputs, which makes it easy to test.
+- **Velocity**: in Roblox, down is negative, so falling at 50 studs/s is `-50`.
+
+**Next time:** write `code/tests/capFallSpeed.spec.luau` first (fast fall gets capped, slow fall is left alone, going up is left alone), watch it fail, then write `capFallSpeed`.
+
+**What was hard / questions I still have:**
+_Add your own notes here._
+
+---
+
 ## 2026-10-29: Choosing the balancing numbers (issue #3)
 
 **What we did:** Picked first-guess numbers for everything the code needs, one question at a time, and wrote them into a new **Balancing** section in `design/game-design.md`:
