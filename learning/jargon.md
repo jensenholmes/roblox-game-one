@@ -28,6 +28,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 
 **Core loop**: the main thing a player does over and over in a game, e.g. *collect → upgrade → collect faster*.
 
+**Data model**: the shape you choose for information in code. For Gear we store two numbers per kind (highest tier owned, tier equipped) instead of a label on every item. A good data model makes the rules that use it short.
+
 **DataStore**: Roblox's service for saving player data between visits, e.g. how much currency a player has.
 
 **Designing for change**: building something so a likely future feature is easy to add, without building that feature yet. Example: working out pull time as toughness ÷ strength, so tougher Scrap can be added later without a rewrite.
@@ -37,6 +39,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 **Design principle**: a rule every feature has to follow, e.g. "no upgrade levels". It keeps lots of separate decisions consistent.
 
 **Design tree**: a map of decisions where each answer opens the next ones. Some questions can't be asked until the ones before them are settled.
+
+**Edge case**: a situation right at the border of a rule, e.g. having *exactly* enough Stardust. Bugs like to hide there (a `>` that should be `>=`), so edge cases get their own tests.
 
 **Exponential curve**: numbers that multiply each step instead of adding, e.g. prices that roughly double (10 → 20 → 40 → 70). The standard shape for prices in incremental games.
 
@@ -62,6 +66,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 
 **Greybox**: a rough version of a map built from plain blocks, to test the layout before making real art.
 
+**Guard clause**: a check at the top of a function that leaves early if something is wrong (`if not allowed then return false end`). The code below it can then assume everything is fine.
+
 **Hook**: the thing that makes a player pick your game out of thousands, e.g. a theme they haven't seen before.
 
 **HUD (Heads-Up Display)**: the info on screen while you play: health, coins, timer.
@@ -74,6 +80,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 
 **Lune**: a program that runs Luau code on your computer, outside Roblox. We use it to run our tests in seconds without opening Studio.
 
+**Make illegal states impossible**: choose a data model where a broken situation can't even be written down. With `ownedUpTo` there's no way to own tier 3 without tier 2.
+
 **Manifest**: a file listing what a project needs, with exact versions. Ours is `rokit.toml`, which lists Rojo and Lune.
 
 **Mechanic**: a single rule of how a game works, e.g. "the Jetpack uses Fuel".
@@ -85,6 +93,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 **MVP (Minimum Viable Product)**: the smallest version of a product that's still useful (or fun). You ship it first, then improve it.
 
 **Never trust the client**: the server checks everything a player's computer sends, because players can change their own copy of the game. The player *asks* to pull Scrap; the server checks range, timing and Backpack space before saying yes.
+
+**nil**: Luau's word for "nothing there". Looking up something that doesn't exist, like tier 6, gives `nil`. Trying to call `nil` as a function causes the error "attempt to call a nil value".
 
 **Parking lot**: a list of ideas written down on purpose so they aren't lost, but that don't block today's work. Ours is the Update log in the GDD.
 
@@ -103,6 +113,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 **Push**: send your commits from your computer up to GitHub, as an online backup.
 
 **Pure function**: a function that only uses its inputs to work out its answer, and changes nothing else. Same inputs, same answer, every time. That makes it easy to test.
+
+**Red, green**: the first two steps of TDD. Red: write a test and watch it fail, which proves it can catch a problem. Green: write just enough code to make it pass.
 
 **RemoteEvent**: a one-way message channel between a player's computer and the server. The Magnet uses `MagnetStart` and `MagnetStop` to ask the server to start or stop a pull.
 
@@ -137,6 +149,8 @@ Technical words, in plain English. Alphabetical. Game-specific words (like the n
 **Sub-issue**: a GitHub Issue that sits under a bigger "parent" issue. Our parent issue #1 tracks all of Milestone 1.
 
 **Tag**: a label you stick on things in Roblox (Properties → Tags), so code can find all of them at once. The spelling must match exactly.
+
+**Table**: Luau's one way of grouping values. It can be a list (`{10, 15, 25}`) or named values (`{ ownedUpTo = 1, equipped = 1 }`).
 
 **TDD (Test-Driven Development)**: write the test first, watch it fail, then write the code that makes it pass.
 
