@@ -4,6 +4,27 @@ One entry per session: what we did, what concept it taught, and anything that wa
 
 ---
 
+## 2026-11-17: Gear catalogue and Gear states (issue #11)
+
+**What we did:**
+- Chose the **data model** for a player's Gear: two numbers per kind, `ownedUpTo` and `equipped`. Tiers are bought in order, so one number covers everything you own.
+- Added the Gear catalogue (5 Magnet tiers and 5 Backpack tiers, with prices and stats) to `Balancing.luau`.
+- Wrote tests first, then `Gear.luau`: `Gear.new` (starter Gear), `Gear.buy`, `Gear.equip` and `Gear.stateOf` (Not owned / Owned / Equipped for the shop buttons). 52 tests pass.
+- I asked Claude to write the code this time and explain each step.
+
+**Concepts learned:**
+- **Data model:** the shape you store information in decides how simple the rules are.
+- **Make illegal states impossible:** with `ownedUpTo`, a gap in owned tiers or two equipped Magnets can't happen.
+- **Red, green:** watch a test fail first, then write just enough code to pass it.
+- **Edge cases:** "exactly enough Stardust" and "tier 6" get their own tests.
+- **Guard clause:** check for problems at the top of a function and leave early.
+
+**What was hard / questions I still have:**
+- The first explanations had too much in them at once. Smaller steps worked better.
+- _Add your own notes here._
+
+---
+
 ## 2026-11-13: The Sell Pad (issue #10)
 
 **What we did:**
